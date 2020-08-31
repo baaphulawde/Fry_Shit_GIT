@@ -34,7 +34,7 @@ CUSTOM_STICKER_NAME =str(CUSTOM_STICKER_PACK_NAME) if CUSTOM_STICKER_PACK_NAME e
 CUSTOM_ANIME_PACK = str(CUSTOM_ANIMATED_PACK_NAME) if CUSTOM_ANIMATED_PACK_NAME else "My Boss Animated Pack"
 FILLED_UP_DADDY = "Invalid pack selected."
 
-@borg.on(admin_cmd(pattern="kang ?(.*)"))
+@borg.on(admin_cmd(pattern="sticky ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,13 +54,13 @@ async def _(event):
     userid = event.from_id
     #packname = f"FRIDAY PACK"
     #packshortname = f"FRIDAY_{userid}_ns"  # format: Uni_Borg_userid
-    if userid == 1263617196:
-        packname = f"@StarkGang Packs 🎭"
-        packshortname = "StarkGangPack"
+    if userid == 1136706887:
+        packname = f"Shit Shit Pack 🎭"
+        packshortname = "kyaHiPackBanayega"
     else:
         packname = f"{user.username}'s {pack}"
-        packshortname = f"FRIDAY_{userid}_Pack"
-    await event.edit("`Wew ! I Love That Sticker ! Mind If i Kang It ?`")
+        packshortname = f"FRiSHIT_{userid}_Pack"
+    await event.edit("`Isko me le rha hu`")
 
     is_a_s = is_it_animated_sticker(reply_message)
     file_ext_ns_ion = "@FRIDAYOT.png"
@@ -69,14 +69,14 @@ async def _(event):
     if is_a_s:
         file_ext_ns_ion = "AnimatedSticker.tgs"
         uploaded_sticker = await borg.upload_file(file, file_name=file_ext_ns_ion)
-        if userid == 813878981:
-            packname = f"StarkGang Ka Pack"
-            packshortname = "StarkGangisgreat"
+        if userid == 1136706887:
+            packname = f"Shit Shit Pack"
+            packshortname = "ShortnameHateIt"
         else:
             packname = f"{user.username}'s {pack}"
-            packshortname = f"FRIDAY_{userid}" # format: Uni_Borg_userid
+            packshortname = f"FriShit_{userid}" # format: Uni_Borg_userid
     elif not is_message_image(reply_message):
-        await event.edit("Invalid message type")
+        await event.edit("Unsupported")
         return
     else:
         with BytesIO(file) as mem_file, BytesIO() as sticker:
@@ -84,7 +84,7 @@ async def _(event):
             sticker.seek(0)
             uploaded_sticker = await borg.upload_file(sticker, file_name=file_ext_ns_ion)
 
-    await event.edit("Packing To Your Pack ! Please Wait!")
+    await event.edit("Ye sticky mera hua!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -194,7 +194,7 @@ async def _(event):
                 await silently_send_message(bot_conv, response)
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
-    await event.edit(f"**Sticker Has Been Kanged SucessFully And Can Be Found** [Here](t.me/addstickers/{packshortname})")
+    await event.edit(f"**Ye idhar milega** [Here pe click nhu hota h isliye isko lamba kar rha hu text ko asani se add hoga](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd(pattern="packinfo"))
