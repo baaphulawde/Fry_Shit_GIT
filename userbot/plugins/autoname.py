@@ -34,7 +34,7 @@ async def _(event):
 
         HM = time.strftime("%H:%M")
 
-        name = f"🌉{DM} ❤𝓓𝓞𝓞𝓜❤ ⌚️{HM}"
+        name = f"⌚️{HM}⚱️الموت⚱️🌉{DM}"
 
         logger.info(name)
 
