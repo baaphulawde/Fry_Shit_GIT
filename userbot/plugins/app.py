@@ -36,11 +36,11 @@ async def apk(event):
         app_details += " <b>"+app_name+"</b>"
         app_details += "\n\n<code>Developer :</code> <a href='"+app_dev_link+"'>"+app_dev+"</a>"
         app_details += "\n<code>Rating :</code> "+app_rating.replace("Rated ", "⭐ ").replace(" out of ", "/").replace(" stars", "", 1).replace(" stars", "⭐ ").replace("five", "5")
-        app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
-        app_details += "\n\n===> @FridayOT <==="
+        app_details += "\n<code>Features :</code> <a href='"+app_link+"'>Link to Play Store</a>"
+        app_details += "\n\n===> @AXENDRO <==="
         await event.edit(app_details, link_preview = True, parse_mode = 'HTML')
     except IndexError:
-        await event.edit("No result found in search. Please enter **Valid app name**")
+        await event.edit("Play store pe nhi h!!!")
     except Exception as err:
         await event.edit("Exception Occured:- "+str(err))
         
@@ -66,12 +66,11 @@ async def apkr(event):
         app_details += " <b>"+app_name+"</b>"
         app_details += "\n\n<code>Developer :</code> <a href='"+app_dev_link+"'>"+app_dev+"</a>"
         app_details += "\n<code>Rating :</code> "+app_rating.replace("Rated ", "⭐ ").replace(" out of ", "/").replace(" stars", "", 1).replace(" stars", "⭐ ").replace("five", "5")
-        app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
-        app_details += "\n\n<b>Download : </b> <a href='https://t.me/joinchat/JCu-H1NikiYDgNjpjPYd4A'>Request_Here</a>"
-        app_details += "\n\n===> @FridayOT <==="
+        app_details += "\n<code>Features :</code> <a href='"+app_link+"'>Link to Google Play Store</a>"
+        app_details += "\n\n===> @AXENDRO <==="
         await event.edit(app_details, link_preview = True, parse_mode = 'HTML')
     except IndexError:
-        await event.edit("No result found in search. Please enter **Valid app name**")
+        await event.edit("Play store pe nhi h!!!!!!!!")
     except Exception as err:
         await event.edit("Exception Occured:- "+str(err))
         
